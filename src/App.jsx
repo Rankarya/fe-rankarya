@@ -1,16 +1,15 @@
-import { useState } from 'react'
+import React from "react";
+import Navbar from "./components/Navbar"; 
+import Footer from "./components/Footer"; 
 
 function App() {
   return (
     <div>
-      <ul className='flex gap-4'>
-        <li>tes1</li>
-        <li>tes2</li>
-      </ul>
+      <Navbar />
+      <h1 className="mt-20 mb-28">haloo</h1>
+      <Footer />
     </div>
-  
-    
-  )
+  );
 }
 
-export default App
+export default App;
