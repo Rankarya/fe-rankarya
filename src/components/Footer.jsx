@@ -12,36 +12,40 @@ function Component() {
     <Footer
       container
       fluid="true"
+      className="fixed bottom-0 w-full"
       style={{ backgroundColor: "white", color: "black" }}
     >
       <div className="w-full h-full">
-        <hr className="border-t-2 border-black w-full mb-4" />{" "}
+        <hr className="border-t-2 border-black w-full mb-4" />
         {/* Garis batas atas footer */}
-        <div className="grid lg:grid-cols-3 justify-between sm:flex sm:justify-between md:flex md:grid-cols-1 items-stretch">
-          <div className="mt- flex items-center justify-start">
+        <div className="grid lg:grid-cols-3 justify-between">
+          <div className="flex items-center">
             <Footer.Brand
-              //   href="#"
-              src="https://i.imgur.com/XHGRvkp.png"
+              src="https://i.imgur.com/QW57zC3.jpeg"
               alt="Furnivul Logo"
               name={<span className="text-black">Furnivul</span>}
               className="text-black mx-2"
               style={{ width: "70px", height: "auto" }}
             />
-            <div className="">
+            <div>
               <div className="my-4">
                 <span className="text-black">Rankarya</span> atau Rantai Karya
-                adalah platform <br></br> crowdfunding penikmat seni yang{" "}
-                <br></br> memungkinkan seorang penggemar dapat <br></br>
-                menikmati karya para konten kreator <br></br> dengan sistem
-                langganan berbayar.
+                adalah platform <br /> crowdfunding penikmat seni yang <br />
+                memungkinkan seorang penggemar dapat <br /> menikmati karya para
+                konten kreator <br /> dengan sistem langganan berbayar.
               </div>
             </div>
           </div>
-          <div className="text-center sm:text-left flex items-center justify-center sm:justify-start">
-            <div className="m-auto">Tuangkan kreativitas mu di Rankarya!</div>
+          <div className="flex items-center justify-center sm:justify-end">
+            <div
+              className="text-center mx-auto"
+              style={{ fontSize: "25px", fontWeight: "bold" }}
+            >
+              Tuangkan kreativitas mu di Rankarya!
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
-            <div className="sm:mt-1 justify-start">
+          <div className="flex justify-end mr-10">
+            <div className="sm:col-span-3">
               <Footer.LinkGroup col>
                 <Footer.Link href="" className="text-black">
                   Home
@@ -66,14 +70,14 @@ function Component() {
           </div>
         </div>
         <Footer.Divider />
-        <div className="w-full sm:flex justify-center gap-4 sm:items-center sm:flex-end">
+        <div className="w-full sm:flex justify-center gap-4 sm:items-center">
           <Footer.Copyright
             href="#"
             by="Rankarya"
             year={2024}
             className="text-black"
           />
-          <div className="mt-4  flex gap-2 sm:mt-0 sm:justify-center">
+          <div className="mt-4 flex gap-2 sm:mt-0 sm:justify-end">
             <Footer.Icon
               href="#"
               icon={BsFacebook}

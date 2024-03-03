@@ -36,7 +36,7 @@ export default function Example() {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-11 w-auto"
-                    src="https://i.imgur.com/XHGRvkp.png"
+                    src="https://i.imgur.com/QW57zC3.jpeg"
                     alt="LOGO"
                   />
                 </div>
