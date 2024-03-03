@@ -60,7 +60,7 @@ export default function Example() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-2">
                 <div>
                   <Button className="text-black">Login</Button>
                 </div>
