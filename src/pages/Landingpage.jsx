@@ -34,7 +34,7 @@ function LandingPage() {
               paddingLeft: "0.5rem",
             }}
           />
-          <button className="absolute right-0 top-1 mr-4">
+          <button className="absolute right-0 top-1 mr-4 ">
             <FontAwesomeIcon icon={faSearch} className="w-5 h-4 text-black" />
           </button>
         </div>
@@ -42,7 +42,7 @@ function LandingPage() {
       <div className="flex gap-4 mt-4">
         {/* Card 1 */}
         <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
+          className="rounded-3xl flex-1 relative cursor-pointer hover:opacity-70 duration-200"
           imgSrc="https://i.imgur.com/juOHLWy.png"
           horizontal
           onClick={() => handleCardClick("Art")}
@@ -53,18 +53,18 @@ function LandingPage() {
         </Card>
         {/* Card 2 */}
         <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
+          className="rounded-3xl flex-1 relative cursor-pointer hover:opacity-70 duration-200"
           imgSrc="https://i.imgur.com/2yC4N4d.png"
           horizontal
           onClick={() => handleCardClick("Music")}
         >
-          <div className="absolute top-0 left-0 ml-2 mt-2 text-black font-bold">
+          <div className="absolute top-0 left-0 ml-2 mt-2 text-white font-bold ">
             Music
           </div>
         </Card>
         {/* Card 3 */}
         <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
+          className="rounded-3xl flex-1 relative cursor-pointer hover:opacity-70 duration-200"
           imgSrc="https://i.imgur.com/pAzu8Ml.png"
           horizontal
           onClick={() => handleCardClick("Photography")}
@@ -75,18 +75,18 @@ function LandingPage() {
         </Card>
         {/* Card 4 */}
         <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
+          className="rounded-3xl flex-1 relative cursor-pointer hover:opacity-70 duration-200 "
           imgSrc="https://i.imgur.com/MC0xK4j.png"
           horizontal
           onClick={() => handleCardClick("Game")}
         >
-          <div className="absolute top-0 left-0 ml-2 mt-2 text-black font-bold">
+          <div className="absolute top-0 left-0 ml-2 mt-2 text-white font-bold">
             Game
           </div>
         </Card>
         {/* Card 5 */}
         <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
+          className="rounded-3xl flex-1 relative cursor-pointer hover:opacity-70 duration-200"
           imgSrc="https://i.imgur.com/hugtDZu.png"
           horizontal
           onClick={() => handleCardClick("Podcast")}
