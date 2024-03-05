@@ -12,7 +12,7 @@ function Component() {
     <Footer
       container
       fluid="true"
-      className="fixed bottom-0 w-full"
+      className=""
       style={{ backgroundColor: "white", color: "black" }}
     >
       <div className="w-full h-full">
