@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { Link, useParams, useNavigate } from "react-router-dom";
 
-const Search = () => {
+const SearchPostingan = () => {
     const dataPostingan = {
         tier_id: '1',
         title: 'Postingan',
@@ -53,4 +53,4 @@ const Search = () => {
     );
 }
 
-export default Search;
+export default SearchPostingan;

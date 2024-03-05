@@ -1,10 +1,10 @@
 import Postingan from "../components/Postingan.jsx";
-import Search from "../components/Search.jsx";
+import SearchPostingan from "../components/SearchPostingan.jsx";
 
 const ListPostingan = () => {
   return (
     <>
-        <Search/>
+        <SearchPostingan/>
         <Postingan/>
     </>
   )
