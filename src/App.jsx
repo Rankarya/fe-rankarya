@@ -1,12 +1,10 @@
 import { useState } from 'react'
+import Settings from './pages/settings/settings'
 
 function App() {
   return (
     <div>
-      <ul className='flex gap-4'>
-        <li>tes1</li>
-        <li>tes2</li>
-      </ul>
+      <Settings/>
     </div>
   
     
