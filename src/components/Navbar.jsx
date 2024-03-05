@@ -5,7 +5,7 @@ import { Button } from "flowbite-react";
 
 
 const navigation = [
-  { name: "Home", href: "#", current: false },
+  { name: "Home", href: "/", current: false },
   { name: "Categories", href: "#", current: false },
   { name: "Creators", href: "#", current: false },
 ];
