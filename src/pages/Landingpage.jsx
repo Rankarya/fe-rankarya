@@ -5,6 +5,20 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi";
 
 function LandingPage() {
+  const [activeCardIndex, setActiveCardIndex] = React.useState(0); // State to track the currently visible set of cards (0 or 1)
+
+  const handleCardClick = (category) => {
+    // Handle card click logic (optional, not provided)
+  };
+
+  const handleArrowClick = (direction) => {
+    if (direction === "left" && activeCardIndex > 0) {
+      setActiveCardIndex(activeCardIndex - 1);
+    } else if (direction === "right" && activeCardIndex < 1) {
+      setActiveCardIndex(activeCardIndex + 1);
+    }
+  };
+
   return (
     <div className="relative flex flex-col items-center justify-center gap-4">
       <div className="w-full max-w-sm mt-9 relative">
@@ -88,48 +102,89 @@ function LandingPage() {
       <div className="flex gap-4 mt-4">
         {/* Tombol kiri */}
         <div className="flex flex-wrap gap-2">
-          <button>
+          <button
+            onClick={() => handleArrowClick("left")}
+            disabled={activeCardIndex === 0}
+          >
             <HiOutlineArrowLeft className="h-6 w-6" />
           </button>
         </div>
-        {/* Card 1 */}
-        <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
-          imgSrc="https://i.imgur.com/EBCRZZV.png"
-          horizontal
-          onClick={() => handleCardClick("Art")}
-        ></Card>
-        {/* Card 2 */}
-        <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
-          imgSrc="https://i.imgur.com/IOm3vis.png"
-          horizontal
-          onClick={() => handleCardClick("Music")}
-        ></Card>
-        {/* Card 3 */}
-        <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
-          imgSrc="https://i.imgur.com/wSCPkfn.png"
-          horizontal
-          onClick={() => handleCardClick("Photography")}
-        ></Card>
-        {/* Card 4 */}
-        <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
-          imgSrc="https://i.imgur.com/KUDTrl3.png"
-          horizontal
-          onClick={() => handleCardClick("Game")}
-        ></Card>
-        {/* Card 5 */}
-        <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
-          imgSrc="https://i.imgur.com/oXnJIAe.png"
-          horizontal
-          onClick={() => handleCardClick("Podcast")}
-        ></Card>
+        {/* Card 1 - 5 (ditampilkan berdasarkan activeCardIndex) */}
+        {activeCardIndex === 0 && (
+          <>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/EBCRZZV.png"
+              horizontal
+              onClick={() => handleCardClick("Art")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/IOm3vis.png"
+              horizontal
+              onClick={() => handleCardClick("Music")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/wSCPkfn.png"
+              horizontal
+              onClick={() => handleCardClick("Photography")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/KUDTrl3.png"
+              horizontal
+              onClick={() => handleCardClick("Game")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/oXnJIAe.png"
+              horizontal
+              onClick={() => handleCardClick("Podcast")}
+            ></Card>
+          </>
+        )}
+        {/* Card 6 - 10 (ditampilkan berdasarkan activeCardIndex) */}
+        {activeCardIndex === 1 && (
+          <>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/8Ujhz0O.png"
+              horizontal
+              onClick={() => handleCardClick("Art")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/LIErBtm.png"
+              horizontal
+              onClick={() => handleCardClick("Music")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/HEQMY7t.png"
+              horizontal
+              onClick={() => handleCardClick("Photography")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/QKuKurX.png"
+              horizontal
+              onClick={() => handleCardClick("Game")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer mb-8"
+              imgSrc="https://i.imgur.com/69KVHrI.png"
+              horizontal
+              onClick={() => handleCardClick("Podcast")}
+            ></Card>
+          </>
+        )}
         {/* Tombol kanan */}
         <div className="flex flex-wrap gap-2">
-          <button>
+          <button
+            onClick={() => handleArrowClick("right")}
+            disabled={activeCardIndex === 1}
+          >
             <HiOutlineArrowRight className="h-6 w-6" />
           </button>
         </div>
@@ -140,52 +195,89 @@ function LandingPage() {
       <div className="flex gap-4 mt-4">
         {/* Tombol kiri */}
         <div className="flex flex-wrap gap-2">
-          <button>
+          <button
+            onClick={() => handleArrowClick("left")}
+            disabled={activeCardIndex === 0}
+          >
             <HiOutlineArrowLeft className="h-6 w-6" />
           </button>
         </div>
-        {/* Card 1 */}
-        <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
-          imgSrc="https://i.imgur.com/8Ujhz0O.png"
-          horizontal
-          onClick={() => handleCardClick("Art")}
-        ></Card>
-
-        {/* Card 2 */}
-        <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
-          imgSrc="https://i.imgur.com/LIErBtm.png"
-          horizontal
-          onClick={() => handleCardClick("Music")}
-        ></Card>
-
-        {/* Card 3 */}
-        <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
-          imgSrc="https://i.imgur.com/HEQMY7t.png"
-          horizontal
-          onClick={() => handleCardClick("Photography")}
-        ></Card>
-        {/* Card 4 */}
-        <Card
-          className="rounded-3xl flex-1 relative cursor-pointer"
-          imgSrc="https://i.imgur.com/QKuKurX.png"
-          horizontal
-          onClick={() => handleCardClick("Game")}
-        ></Card>
-        {/* Card 5 */}
-        <Card
-          className="rounded-3xl flex-1 relative cursor-pointer mb-8"
-          imgSrc="https://i.imgur.com/69KVHrI.png"
-          horizontal
-          onClick={() => handleCardClick("Podcast")}
-        >
-         
-        </Card>
+        {/* Card 1 - 5 (ditampilkan berdasarkan activeCardIndex) */}
+        {activeCardIndex === 0 && (
+          <>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/8Ujhz0O.png"
+              horizontal
+              onClick={() => handleCardClick("Art")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/LIErBtm.png"
+              horizontal
+              onClick={() => handleCardClick("Music")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/HEQMY7t.png"
+              horizontal
+              onClick={() => handleCardClick("Photography")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/QKuKurX.png"
+              horizontal
+              onClick={() => handleCardClick("Game")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer mb-8"
+              imgSrc="https://i.imgur.com/69KVHrI.png"
+              horizontal
+              onClick={() => handleCardClick("Podcast")}
+            ></Card>
+          </>
+        )}
+        {/* Card 6 - 10 (ditampilkan berdasarkan activeCardIndex) */}
+        {activeCardIndex === 1 && (
+          <>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/EBCRZZV.png"
+              horizontal
+              onClick={() => handleCardClick("Art")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/IOm3vis.png"
+              horizontal
+              onClick={() => handleCardClick("Music")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/wSCPkfn.png"
+              horizontal
+              onClick={() => handleCardClick("Photography")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer"
+              imgSrc="https://i.imgur.com/KUDTrl3.png"
+              horizontal
+              onClick={() => handleCardClick("Game")}
+            ></Card>
+            <Card
+              className="rounded-3xl flex-1 relative cursor-pointer mb-8"
+              imgSrc="https://i.imgur.com/oXnJIAe.png"
+              horizontal
+              onClick={() => handleCardClick("Podcast")}
+            ></Card>
+          </>
+        )}
         {/* Tombol kanan */}
         <div className="flex flex-wrap gap-2">
-          <button>
+          <button
+            onClick={() => handleArrowClick("right")}
+            disabled={activeCardIndex === 1}
+          >
             <HiOutlineArrowRight className="h-6 w-6" />
           </button>
         </div>
