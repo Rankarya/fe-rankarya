@@ -1,5 +1,4 @@
-import { Route, RouterProvider, createRoutesFromElements } from "react-router";
-import { createBrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import LandingPage from "./pages/Landingpage";
 import Navbar from "./components/Navbar";
@@ -7,25 +6,21 @@ import Footer from "./components/Footer";
 import Settings from "./pages/settings/settings";
 import Creator from "./pages/creator";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/post" element={<Creator />} />
-      <Route path="/settings" element={<Settings />} />
-    </>
-  )
-);
-
 function App() {
   return (
-    <div className="h-screen">
-      <div>
-        <Navbar />
-        <RouterProvider router={router} />
+    <Router>
+      <div className="h-screen">
+        <div>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/post" element={<Creator />} />
+            <Route path="/settings" element={<Settings />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 

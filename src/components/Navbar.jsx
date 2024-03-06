@@ -2,12 +2,13 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Button } from "flowbite-react";
+import { Link } from 'react-router-dom';
 
 
 const navigation = [
-  { name: "Home", href: "#", current: false },
-  { name: "Categories", href: "#", current: false },
-  { name: "Creators", href: "#", current: false },
+  { name: "Home", href: "/", current: false },
+  { name: "Categories", href: "/categories", current: false },
+  { name: "Creators", href: "/post", current: false },
 ];
 
 function classNames(...classes) {
@@ -43,9 +44,9 @@ export default function Nav() {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4 h-full items-center">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
@@ -55,25 +56,29 @@ export default function Nav() {
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               </div>
               <div className="flex flex-wrap gap-2">
                 <div>
-                  <Button className="text-black">Login</Button>
+                  <Link to="/login">
+                    <Button className="text-black">Login</Button>
+                  </Link>
                 </div>
                 <div>
-                  <Button
-                    style={{
-                      color: "white",
-                      backgroundColor: "black",
-                      border: "none",
-                    }}
-                  >
-                    Register
-                  </Button>
+                  <Link to="/register">
+                    <Button
+                      style={{
+                        color: "white",
+                        backgroundColor: "black",
+                        border: "none",
+                      }}
+                    >
+                      Register
+                    </Button>
+                  </Link>
                 </div>
               </div>
 
@@ -103,41 +108,41 @@ export default function Nav() {
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <Link
+                            to="/post"
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
                           >
                             Your Profile
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <Link
+                            to="/settings"
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
                           >
                             Settings
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <Link
+                            to="/sign-out"
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
                           >
                             Sign out
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                     </Menu.Items>
