@@ -10,9 +10,7 @@ function App() {
       <Settings/>
       <Footer />
     </div>
-  
-    
-  )
+  );
 }
 
-export default App
+export default App;
