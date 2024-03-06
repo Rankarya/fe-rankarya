@@ -1,15 +1,16 @@
-import { useState } from 'react'
+// import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Login from './pages/loginuser'
+import Register from './pages/registeruser'
 
 function App() {
   return (
-    <div>
-      <ul className='flex gap-4'>
-        <li>tes1</li>
-        <li>tes2</li>
-      </ul>
-    </div>
-  
-    
+    <BrowserRouter>
+      <Routes>
+          <Route path='/login' element={<Login />}></Route>
+          <Route path='/register' element={<Register />}></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
