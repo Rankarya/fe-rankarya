@@ -1,13 +1,27 @@
-import { useState } from 'react'
-import Settings from './pages/settings/settings'
-import Navbar from "./components/Navbar"; 
-import Footer from "./components/Footer"; 
+import { Route, RouterProvider, createRoutesFromElements } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
+
+import LandingPage from "./pages/Landingpage";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ListPostingan from "./pages/ListPostingan";
+import Settings from "./pages/settings/settings";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/post" element={<ListPostingan/>} />
+      <Route path="/settings" element={<Settings/>} />
+    </>
+  )
+);
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Settings/>
+      <RouterProvider router={router} />
       <Footer />
     </div>
   );
