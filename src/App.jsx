@@ -11,17 +11,19 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/post" element={<Creator/>} />
-      <Route path="/settings" element={<Settings/>} />
+      <Route path="/post" element={<Creator />} />
+      <Route path="/settings" element={<Settings />} />
     </>
   )
 );
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <RouterProvider router={router} />
+    <div className="h-screen">
+      <div>
+        <Navbar />
+        <RouterProvider router={router} />
+      </div>
       <Footer />
     </div>
   );
