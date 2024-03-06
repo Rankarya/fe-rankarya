@@ -4,14 +4,14 @@ import { createBrowserRouter } from "react-router-dom";
 import LandingPage from "./pages/Landingpage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import ListPostingan from "./pages/ListPostingan";
 import Settings from "./pages/settings/settings";
+import Creator from "./pages/creator";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/post" element={<ListPostingan/>} />
+      <Route path="/post" element={<Creator/>} />
       <Route path="/settings" element={<Settings/>} />
     </>
   )
