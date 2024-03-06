@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ProfilePage from './pages/profile';
+import ProfilePage from './pages/profile/profilecreator';
 
 function App() {
   return (

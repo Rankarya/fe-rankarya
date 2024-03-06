@@ -1,5 +1,5 @@
 import React from 'react';
-import TierCard from '../../components/tier-card';
+import TierCard from '../../components/tier-card/tiercard';
 // import ProfileHeader from '../../components/profile-header';
 
 const ProfilePage = () => {
