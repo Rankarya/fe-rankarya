@@ -15,8 +15,8 @@ function Component() {
       className=""
       style={{ backgroundColor: "white", color: "black" }}
     >
-      <div className="w-full h-full">
-        <hr className="border-t-2 border-black w-full mb-4" />
+      <div className="w-full h-full justify-between">
+        <hr className="border-t w-full mb-4" />
         {/* Garis batas atas footer */}
         <div className="grid lg:grid-cols-3 justify-between">
           <div className="flex items-center">
@@ -44,7 +44,7 @@ function Component() {
               Tuangkan kreativitas mu di Rankarya!
             </div>
           </div>
-          <div className="flex justify-end mr-10">
+          <div className="flex justify-end items-center mr-10">
             <div className="sm:col-span-3">
               <Footer.LinkGroup col>
                 <Footer.Link href="" className="text-black">
@@ -62,7 +62,7 @@ function Component() {
                 </Footer.Link>
               </Footer.LinkGroup>
               <Footer.LinkGroup col>
-                <Footer.Link href="#" className="text-black mt-3 mb-9">
+                <Footer.Link href="#" className="text-black mt-3 ">
                   Top Contents
                 </Footer.Link>
               </Footer.LinkGroup>
@@ -70,7 +70,7 @@ function Component() {
           </div>
         </div>
         <Footer.Divider />
-        <div className="w-full sm:flex justify-center gap-4 sm:items-center">
+        <div className="w-full sm:flex justify-center my-2 gap-4 sm:items-center">
           <Footer.Copyright
             href="#"
             by="Rankarya"
