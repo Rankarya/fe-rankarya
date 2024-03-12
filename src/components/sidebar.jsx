@@ -1,11 +1,22 @@
-export default function Sidebar() {
+export default function Sidebar({ handlePageChange, activePage }) {
   return (
     <>
       <div className="flex flex-col w-2/12">
-        <ul className="flex flex-col gap-2 border-b-2">
-          <li className="group flex items-center gap-2 py-2 px-6 cursor-pointer fill-black hover:fill-white hover:bg-gray-700 hover:text-white">
+        <ul className="flex flex-col border-b-2">
+          <li
+            className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
+              activePage === "Profile"
+                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+            }`}
+            onClick={() => handlePageChange("Profile")}
+          >
             <svg
-              className="fill-black group-hover:fill-white"
+              className={`${
+                activePage === "Profile"
+                  ? "fill-white group-hover:fill-white"
+                  : "fill-black group-hover:fill-white"
+              }`}
               width="20"
               height="20"
               viewBox="0 0 18 17"
@@ -16,9 +27,21 @@ export default function Sidebar() {
             </svg>
             Profile
           </li>
-          <li className="group flex items-center gap-2 py-2 px-6 cursor-pointer hover:bg-gray-700 hover:text-white">
+
+          <li
+            className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
+              activePage === "Account"
+                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+            }`}
+            onClick={() => handlePageChange("Account")}
+          >
             <svg
-              className="fill-black group-hover:fill-white"
+              className={`${
+                activePage === "Account"
+                  ? "fill-white group-hover:fill-white"
+                  : "fill-black group-hover:fill-white"
+              }`}
               width="20"
               height="20"
               viewBox="0 0 20 20"
@@ -29,9 +52,20 @@ export default function Sidebar() {
             </svg>
             Account
           </li>
-          <li className="group flex items-center gap-2 py-2 px-6 cursor-pointer hover:bg-gray-700 hover:text-white">
+          <li
+            className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
+              activePage === "Theme"
+                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+            }`}
+            onClick={() => handlePageChange("Theme")}
+          >
             <svg
-              className="fill-black group-hover:fill-white"
+              className={`${
+                activePage === "Theme"
+                  ? "fill-white group-hover:fill-white"
+                  : "fill-black group-hover:fill-white"
+              }`}
               width="20"
               height="20"
               viewBox="0 0 20 20"
@@ -42,9 +76,20 @@ export default function Sidebar() {
             </svg>
             Theme
           </li>
-          <li className="group flex items-center gap-2 py-2 px-6 cursor-pointer hover:bg-gray-700 hover:text-white">
+          <li
+            className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
+              activePage === "Subscriptions"
+                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+            }`}
+            onClick={() => handlePageChange("Subscriptions")}
+          >
             <svg
-              className="fill-black group-hover:fill-white"
+              className={`${
+                activePage === "Subscription"
+                  ? "fill-white group-hover:fill-white"
+                  : "fill-black group-hover:fill-white"
+              }`}
               width="20"
               height="20"
               viewBox="0 0 22 24"
@@ -55,9 +100,20 @@ export default function Sidebar() {
             </svg>
             Subscriptions
           </li>
-          <li className="group flex items-center gap-2 py-2 px-6 cursor-pointer hover:bg-gray-700 hover:text-white">
+          <li
+            className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
+              activePage === "Wallet"
+                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+            }`}
+            onClick={() => handlePageChange("Wallet")}
+          >
             <svg
-              className="fill-black group-hover:fill-white"
+              className={`${
+                activePage === "Wallet"
+                  ? "fill-white group-hover:fill-white"
+                  : "fill-black group-hover:fill-white"
+              }`}
               width="20"
               height="20"
               viewBox="0 0 20 18"
@@ -69,10 +125,21 @@ export default function Sidebar() {
             Wallet
           </li>
         </ul>
-        <ul className="flex flex-col gap-2 ">
-          <li class="group flex items-center gap-2 py-2 px-6 cursor-pointer hover:bg-gray-700 hover:text-white">
+        <ul className="flex flex-col">
+          <li
+            className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
+              activePage === "Help Center"
+                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+            }`}
+            onClick={() => handlePageChange("Help Center")}
+          >
             <svg
-              class="fill-black group-hover:fill-white"
+              className={`${
+                activePage === "Help Center"
+                  ? "fill-white group-hover:fill-white"
+                  : "fill-black group-hover:fill-white"
+              }`}
               width="20"
               height="20"
               viewBox="0 0 20 23"
@@ -83,9 +150,20 @@ export default function Sidebar() {
             Help Center
           </li>
 
-          <li className="group flex items-center gap-2 py-2 px-6 cursor-pointer hover:bg-gray-700 hover:text-white">
+          <li
+            className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
+              activePage === "Terms of Use"
+                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+            }`}
+            onClick={() => handlePageChange("Terms of Use")}
+          >
             <svg
-              className="fill-black group-hover:fill-white"
+              className={`${
+                activePage === "Terms of Use"
+                  ? "fill-white group-hover:fill-white"
+                  : "fill-black group-hover:fill-white"
+              }`}
               width="20"
               height="20"
               viewBox="0 0 16 20"
@@ -96,19 +174,27 @@ export default function Sidebar() {
             </svg>
             Terms of Use
           </li>
-          <li className="group flex items-center gap-2 py-2 px-6 cursor-pointer hover:bg-gray-700 hover:text-white">
+          <li
+            className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
+              activePage === "Privacy Policy"
+                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+            }`}
+            onClick={() => handlePageChange("Privacy Policy")}
+          >
             <svg
-              className="fill-black group-hover:fill-white"
+              className={`${
+                activePage === "Privacy Policy"
+                  ? "fill-white group-hover:fill-white"
+                  : "fill-black group-hover:fill-white"
+              }`}
               width="20"
               height="20"
               viewBox="0 0 16 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M7 15H9V9H7V15ZM8 7C8.28333 7 8.521 6.904 8.713 6.712C8.905 6.52 9.00067 6.28267 9 6C9 5.71667 8.904 5.47933 8.712 5.288C8.52 5.09667 8.28267 5.00067 8 5C7.71667 5 7.47933 5.096 7.288 5.288C7.09667 5.48 7.00067 5.71733 7 6C7 6.28333 7.096 6.521 7.288 6.713C7.48 6.905 7.71733 7.00067 8 7ZM8 20C5.68333 19.4167 3.77067 18.0873 2.262 16.012C0.753334 13.9367 -0.000666225 11.6327 4.41696e-07 9.1V3L8 0L16 3V9.1C16 11.6333 15.246 13.9377 13.738 16.013C12.23 18.0883 10.3173 19.4173 8 20Z"
-        
-              />
+              <path d="M7 15H9V9H7V15ZM8 7C8.28333 7 8.521 6.904 8.713 6.712C8.905 6.52 9.00067 6.28267 9 6C9 5.71667 8.904 5.47933 8.712 5.288C8.52 5.09667 8.28267 5.00067 8 5C7.71667 5 7.47933 5.096 7.288 5.288C7.09667 5.48 7.00067 5.71733 7 6C7 6.28333 7.096 6.521 7.288 6.713C7.48 6.905 7.71733 7.00067 8 7ZM8 20C5.68333 19.4167 3.77067 18.0873 2.262 16.012C0.753334 13.9367 -0.000666225 11.6327 4.41696e-07 9.1V3L8 0L16 3V9.1C16 11.6333 15.246 13.9377 13.738 16.013C12.23 18.0883 10.3173 19.4173 8 20Z" />
             </svg>
             Privacy Policy
           </li>

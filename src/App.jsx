@@ -1,18 +1,12 @@
-import { useState } from 'react'
-import Settings from './pages/settings/settings'
-import Navbar from "./components/Navbar"; 
-import Footer from "./components/Footer"; 
+import { useState } from "react";
+import Settings from "./pages/settings/settings";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Settings/>
-      <Footer />
+      <Settings />
     </div>
-  
-    
-  )
+  );
 }
 
-export default App
+export default App;

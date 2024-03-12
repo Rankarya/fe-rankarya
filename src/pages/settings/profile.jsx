@@ -5,7 +5,7 @@ export default function Profile() {
         <div>
           <img
             src="https://i.imgur.com/eOx9uGG.jpeg"
-            className="w-[40px] h-[40px] rounded-md"
+            className="w-[40px] h-[40px] rounded-full"
           ></img>
         </div>
         <div className="flex flex-col">
