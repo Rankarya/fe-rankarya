@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Settings from "./pages/settings/settings";
 import Creator from "./pages/creator";
-import Categories from './pages/categories';
+
 
 function App() {
   return (
@@ -15,7 +15,6 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/categories" element={<Categories />} />
             <Route path="/post" element={<Creator />} />
             <Route path="/settings" element={<Settings />} />
           </Routes>

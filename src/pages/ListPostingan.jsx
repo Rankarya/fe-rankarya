@@ -4,10 +4,10 @@ import SearchPostingan from "../components/SearchPostingan.jsx";
 const ListPostingan = () => {
   return (
     <>
-        <SearchPostingan/>
-        <Postingan/>
+      <SearchPostingan />
+      <Postingan />
     </>
-  )
-}
+  );
+};
 
 export default ListPostingan;
