@@ -1,46 +1,58 @@
-// import React from 'react'
-import { AiFillFacebook, AiFillGoogleCircle, AiFillTwitterCircle } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
-import Register from '../pages/registeruser';
-function loginuser() {
+//import * as React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleUser } from '@fortawesome/free-regular-svg-icons';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
+function LoginUser() {
   return (
-    <>
-    <div className="bg-zinc-200 h-screen flex justify-center items-center">
-      <div className="bg-white rounded-lg shadow-lg shadow-black/30 pl-10 h-96 w-[350px] flex flex-col justify-center">
-        <form className="space-y-1" action="">
-          <div>
-            <p className="font-semibold text-2xl tracking-wide">LOGIN</p>
+    <div className=" text-black flex items-center justify-center min-h-screen">
+      <div className="w-full max-w-md p-8 rounded-md">
+        <img src="https://i.imgur.com/QW57zC3.jpeg" alt="" className=" mx-auto w-20 mb-5" />
+        <form>
+          <div className="mb-4">
+          <span className="relative flex items-center">
+              <FontAwesomeIcon icon={faCircleUser} className="absolute left-2 text-black" />
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Username or Email"
+                className="w-full pl-8 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-black"
+              />
+            </span>
           </div>
-          <div className="mr-5">
-            <p className="text-zinc-600 font-semibold">Email :</p>
-            <input className="outline-none px-5 h-10 border border-sm w-full" type="text" placeholder="Email"  />
+          <div className="mb-6">
+            <span className='relative flex items-center'>
+              <FontAwesomeIcon icon={faLock} className='absolute left-2 text-black' />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                className="w-full pl-8 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-black"
+              />
+            </span>
           </div>
-          <div className="mr-5">
-            <p className="text-zinc-600 font-semibold">Password</p>
-            <input className="outline-none px-5 h-10 border border-sm w-full" type="password" placeholder="Password"  />
+          <div className="flex items-center justify-center mb-4">
+            <a href="#" className="text-sm text-black hover:underline font-semibold">
+              Forgot Password?
+            </a>
           </div>
-          <div className='flex space-y gap-5 mt-1'>
-            <input type="checkbox" />
-            <p>Remember Me</p>
-          </div>
-          <div className='mr-5'>
-            <button className='bg-blue-400 hover:bg-blue-600 text-white rounded-full h-10 w-full font-semibold duration-300'>LOGIN</button>
-            <p className='text-end'>Forgot Password</p>
-          </div>
-          <p className='flex justify-center font-bold'>OR</p>
-          <div className='flex flex-row justify-center gap-10 text-3xl'>
-            <AiFillTwitterCircle className=' rounded-full text-blue-500'/>
-            <AiFillGoogleCircle className=' rounded-full text-red-500'/>
-            <AiFillFacebook className=' rounded-full text-blue-700'/>
-          </div>              
-          <div>
-            <p className='text-zinc-500'>Make A Account ? <button className='text-black font-bold underline underline-offset-4'><Link to="/register" element={<Register />}></Link>Register</button></p> 
-          </div>
+          <button
+            type="submit"
+            className="w-full py-2 text-center bg-black text-white rounded-md"
+          >
+            Login
+          </button>
         </form>
+        <div className="mt-8 text-center text-sm">
+          Dont have an account?{' '}
+          <a href="#" className="text-black hover:underline font-semibold">
+            Register
+          </a>
+        </div>
       </div>
     </div>
-    </>
-  )
+  );
 }
 
-export default loginuser
+export default LoginUser;
