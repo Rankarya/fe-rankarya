@@ -61,12 +61,12 @@ function registeruser() {
             type="submit"
             className="w-full py-2 text-center bg-black text-white rounded-md"
           >
-            Register
+            <a href="/login">Register</a>
           </button>
         </form>
         <div className="mt-8 text-center text-sm">
           already have an account?{' '}
-          <a href="#" className="text-black hover:underline font-semibold">
+          <a href="/login" className="text-black hover:underline font-semibold">
             Login
           </a>
         </div>

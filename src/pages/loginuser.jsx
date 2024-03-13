@@ -33,7 +33,7 @@ function LoginUser() {
             </span>
           </div>
           <div className="flex items-center justify-center mb-4">
-            <a href="#" className="text-sm text-black hover:underline font-semibold">
+            <a href="/forgotpassword" className="text-sm text-black hover:underline font-semibold">
               Forgot Password?
             </a>
           </div>
@@ -41,12 +41,12 @@ function LoginUser() {
             type="submit"
             className="w-full py-2 text-center bg-black text-white rounded-md"
           >
-            Login
+            <a href="#">Login</a>
           </button>
         </form>
         <div className="mt-8 text-center text-sm">
           Dont have an account?{' '}
-          <a href="#" className="text-black hover:underline font-semibold">
+          <a href="/register" className="text-black hover:underline font-semibold">
             Register
           </a>
         </div>
