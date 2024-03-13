@@ -5,6 +5,7 @@ import Theme from "./theme";
 import Sidebar from "../../components/sidebar";
 import Updateprofile from "./updateprofile";
 import Subscription from "./subscription";
+import Help from "./help";
 
 export default function Settings() {
   const [activePage, setActivePage] = useState("Profile");
@@ -23,6 +24,7 @@ export default function Settings() {
         {activePage === "Account" && <Account />}
         {activePage === "Theme" && <Theme />}
         {activePage === "Subscription" && <Subscription/>}
+        {activePage === "Help Center" && <Help/>}
       </div>
     </div>
   );
