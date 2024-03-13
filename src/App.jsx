@@ -1,13 +1,12 @@
-import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ListPostingan from "./pages/ListPostingan.jsx";
+import ListPost from "./pages/ListPost.jsx";
 
 
 function App() {
   return (
     <Router>
       <Routes>
-      <Route path={"/post"} element={<ListPostingan />} />
+      <Route path={"/post"} element={<ListPost />} />
       </Routes>
     </Router>
     // <div>
