@@ -78,11 +78,11 @@ export default function Sidebar({ handlePageChange, activePage }) {
           </li>
           <li
             className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
-              activePage === "Subscriptions"
+              activePage === "Subscription"
                 ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
                 : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
             }`}
-            onClick={() => handlePageChange("Subscriptions")}
+            onClick={() => handlePageChange("Subscription")}
           >
             <svg
               className={`${
@@ -99,30 +99,6 @@ export default function Sidebar({ handlePageChange, activePage }) {
               <path d="M21.539 8.242H0.459961V5.406H21.54L21.539 8.242ZM0.459961 10.812V24L11 18.11L21.54 24V10.812H0.459961ZM21.54 0H0.459961V2.836H21.54V0Z" />
             </svg>
             Subscriptions
-          </li>
-          <li
-            className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
-              activePage === "Wallet"
-                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
-                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
-            }`}
-            onClick={() => handlePageChange("Wallet")}
-          >
-            <svg
-              className={`${
-                activePage === "Wallet"
-                  ? "fill-white group-hover:fill-white"
-                  : "fill-black group-hover:fill-white"
-              }`}
-              width="20"
-              height="20"
-              viewBox="0 0 20 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0.00488281 6H19.0049C19.2701 6 19.5245 6.10536 19.712 6.29289C19.8995 6.48043 20.0049 6.73478 20.0049 7V17C20.0049 17.2652 19.8995 17.5196 19.712 17.7071C19.5245 17.8946 19.2701 18 19.0049 18H1.00488C0.739666 18 0.485312 17.8946 0.297776 17.7071C0.11024 17.5196 0.00488281 17.2652 0.00488281 17V6ZM1.00488 0H16.0049V4H0.00488281V1C0.00488281 0.734784 0.11024 0.48043 0.297776 0.292893C0.485312 0.105357 0.739666 0 1.00488 0ZM13.0049 11V13H16.0049V11H13.0049Z" />
-            </svg>
-            Wallet
           </li>
         </ul>
         <ul className="flex flex-col">
