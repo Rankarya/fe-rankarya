@@ -10,7 +10,7 @@ export default function Subbed() {
         </div>
         <div className="flex flex-col">
           <label className="group-hover:cursor-pointer">Rankarya</label>
-          <label className="group-hover:cursor-pointer">Member</label>
+          <label className="duration-300 group-hover:cursor-pointer text-sm">Member</label>
         </div>
       </div>
     </div>

@@ -26,8 +26,8 @@ export default function Updateprofile() {
           </div>
           <input className="border-b border-b-gray-300 w-[600px] focus:outline-none"></input>
         </div>
-        <div className="duration-300 hover:cursor-pointer hover:opacity-75">
-          <svg
+        <div className="rounded-sm duration-300 w-[180px] hover:cursor-pointer hover:opacity-75 hover:shadow-md">
+          <svg className=""
             width="172"
             height="33"
             viewBox="0 0 172 33"
