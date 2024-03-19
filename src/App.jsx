@@ -1,16 +1,12 @@
-import { useState } from 'react'
+import { useState } from "react";
+import Result from "./pages/result";
 
 function App() {
   return (
     <div>
-      <ul className='flex gap-4'>
-        <li>tes1</li>
-        <li>tes2</li>
-      </ul>
+      <Result />
     </div>
-  
-    
-  )
+  );
 }
 
-export default App
+export default App;
