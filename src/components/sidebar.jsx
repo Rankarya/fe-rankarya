@@ -6,8 +6,8 @@ export default function Sidebar({ handlePageChange, activePage }) {
           <li
             className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
               activePage === "Profile"
-                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
-                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+                ? "fill-white bg-black opacity-75 text-white hover:opacity-100 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-100 hover:duration-300"
             }`}
             onClick={() => handlePageChange("Profile")}
           >
@@ -31,8 +31,8 @@ export default function Sidebar({ handlePageChange, activePage }) {
           <li
             className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
               activePage === "Account"
-                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
-                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+                ? "fill-white bg-black opacity-75 text-white hover:opacity-100 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-100 hover:duration-300"
             }`}
             onClick={() => handlePageChange("Account")}
           >
@@ -55,8 +55,8 @@ export default function Sidebar({ handlePageChange, activePage }) {
           <li
             className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
               activePage === "Theme"
-                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
-                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+                ? "fill-white bg-black opacity-75 text-white hover:opacity-100 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-100 hover:duration-300"
             }`}
             onClick={() => handlePageChange("Theme")}
           >
@@ -79,8 +79,8 @@ export default function Sidebar({ handlePageChange, activePage }) {
           <li
             className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
               activePage === "Subscription"
-                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
-                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+                ? "fill-white bg-black opacity-75 text-white hover:opacity-100 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-100 hover:duration-300"
             }`}
             onClick={() => handlePageChange("Subscription")}
           >
@@ -105,8 +105,8 @@ export default function Sidebar({ handlePageChange, activePage }) {
           <li
             className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
               activePage === "Help Center"
-                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
-                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+                ? "fill-white bg-black opacity-75 text-white hover:opacity-100 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-100 hover:duration-300"
             }`}
             onClick={() => handlePageChange("Help Center")}
           >
@@ -129,8 +129,8 @@ export default function Sidebar({ handlePageChange, activePage }) {
           <li
             className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
               activePage === "Terms of Use"
-                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
-                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+                ? "fill-white bg-black opacity-75 text-white hover:opacity-100 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-100 hover:duration-300"
             }`}
             onClick={() => handlePageChange("Terms of Use")}
           >
@@ -153,8 +153,8 @@ export default function Sidebar({ handlePageChange, activePage }) {
           <li
             className={`group flex items-center gap-2 py-2 px-6 cursor-pointer ${
               activePage === "Privacy Policy"
-                ? "fill-white bg-black text-white hover:opacity-75 hover:duration-300"
-                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-75 hover:duration-300"
+                ? "fill-white bg-black opacity-75 text-white hover:opacity-100 hover:duration-300"
+                : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-100 hover:duration-300"
             }`}
             onClick={() => handlePageChange("Privacy Policy")}
           >
