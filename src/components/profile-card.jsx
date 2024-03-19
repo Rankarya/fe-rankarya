@@ -1,11 +1,11 @@
 export default function ProfileCard({ data }) {
   const limitedDescription = data.description.slice(0, 100);
   return (
-    <div className="mt-8 flex flex-col w-[180px] h-[240px] border border-black rounded-md hover:cursor-pointer hover:opacity-75">
+    <div className="mt-8 flex flex-col w-[180px] h-[240px] border border-black rounded-2xl hover:cursor-pointer hover:opacity-75">
       <div className="flex justify-center">
-        <div className="bg-black h-[60px] w-full">i</div>
+        <div className="bg-black h-[60px] w-full rounded-t-2xl"></div>
         <img
-          className="absolute mt-6 w-14 h-14 rounded-md"
+          className="absolute mt-6 w-14 h-14 rounded-xl"
           src="https://i.imgur.com/eOx9uGG.jpeg"
         ></img>
       </div>
