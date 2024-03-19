@@ -19,27 +19,32 @@ function LandingPage() {
     {
       title: "PODCAST",
       imageUrl: "https://i.imgur.com/a3cvBp4.png",
-      contentText: "INI PODCAST",
+      contentText:
+        "Selamat datang di Podcast Premium Rankarya, Temukan Serunya Berbagai Bidang! Dengarkanlah suara-suara yang menginspirasi, nikmati pengalaman mendengarkan yang tak tertandingi. Hanya dengan berlangganan, Anda akan mendapatkan akses ke konten-konten premium kami yang memikat hati dan pikiran.",
     },
     {
       title: "ART",
       imageUrl: "https://i.imgur.com/dNQVq49.png",
-      contentText: "INI ART",
+      contentText:
+        "Selamat datang di Galeri Premium Rankarya: Temukan Keindahan Berbagai Bidang! Mari menggali ke dalam alam estetika yang memikat, merasakan sentuhan magis dari berbagai karya seni yang mempesona. Hanya dengan berlangganan, Anda akan menemukan akses eksklusif ke dalam dunia kreativitas yang memukau dan menginspirasi.Nikmatilah perjalanan visual yang mendalam, jauh dari kerumitan dunia nyata, dan temukan pengalaman melihat yang tak tertandingi. Bergabunglah dengan kami untuk mengeksplorasi kekayaan seni dari sudut pandang yang baru.",
     },
     {
       title: "PHOTOGRAPHY",
       imageUrl: "https://i.imgur.com/9lW9s49.png",
-      contentText: "INIII PHOTOGRAPHY",
+      contentText:
+        "Selamat datang di Podcast Premium Rankarya, Temukan Keindahan Berbagai Bidang Fotografi! Mari jelajahi dunia visual yang memukau, rasakan keajaiban dalam setiap frame. Bersama kami, Anda akan mengalami perjalanan mengagumkan melalui gambar-gambar yang menginspirasi, mengeksplorasi keindahan yang tak terkira dari berbagai sudut pandang. Hanya dengan berlangganan, Anda akan membuka pintu menuju galeri-galeri premium kami yang menawan hati dan memikat pikiran. Sambutlah kehadiran kami sebagai jendela ke dunia fotografi yang penuh warna dan makna.",
     },
     {
       title: "MUSIC",
       imageUrl: "https://i.imgur.com/BOwQ7vQ.png",
-      contentText: "INI MUSIC",
+      contentText:
+        "Selamat datang di Musik Premium Rankarya: Rasakan Kebesaran Beragam Aliran! Dengarkanlah melodi-melodi yang mempesona, nikmati pengalaman mendengarkan yang tak tertandingi. Hanya dengan berlangganan, Anda akan mendapatkan akses ke koleksi musik premium kami yang memukau dan menginspirasi. Segera temukan keindahan dalam setiap nada, dan jadilah bagian dari komunitas pecinta musik yang mengapresiasi keberagaman dan kualitas tinggi!",
     },
     {
       title: "GAME",
       imageUrl: "https://i.imgur.com/S6GWiB2.png",
-      contentText: "INI GAME",
+      contentText:
+        "Selamat datang di Game Premium Rankarya: Temukan Petualangan Tanpa Batas! Rasakan sensasi-sensasi yang menghibur, nikmati pengalaman bermain yang tak terlupakan. Hanya dengan berlangganan, Anda akan mendapatkan akses ke koleksi game premium kami yang memukau dan mendebarkan. Segera jelajahi dunia-dunia fantastis, dan jadilah bagian dari komunitas gamer yang selalu haus akan tantangan dan keseruan!",
     },
   ];
 
@@ -131,12 +136,12 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center gap-4">
+      <div className="flex flex-col items-center justify-center gap-4 ml-12">
         <div className="w-full max-w-sm mt-9 ">
-          <div className="flex">
+          <div className="flex relative">
             <TextInput
               placeholder="Cari kreator atau topik"
-              className="w-full bg-white rounded-md"
+              className="w-full bg-white rounded-md pr-10"
               style={{
                 height: "2rem",
                 borderColor: "black",
@@ -145,7 +150,7 @@ function LandingPage() {
                 paddingLeft: "0.5rem",
               }}
             />
-            <button className="right-0 top-1 mr-4">
+            <button className="absolute inset-y-0 right-0 flex items-center justify-center">
               <FontAwesomeIcon icon={faSearch} className="w-5 h-4 text-black" />
             </button>
           </div>
