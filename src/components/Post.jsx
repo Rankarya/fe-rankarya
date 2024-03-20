@@ -36,11 +36,123 @@ const Post = () => {
     setSuccessAlert(false); // Set state successAlert menjadi false saat pengguna menutup pop-up pemberitahuan
   };
 
+  // const [file, setFile] = useState(null);
+  // const [isLoading, setIsLoading] = useState(true);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     setIsLoading(true);
+  //     const response = await fetch("/api/files/1");
+  //     const data = await response.json();
+  //     setFile(data.file);
+  //     setIsLoading(false);
+  //   };
+
+  //   fetchData();
+  // }, []);
+
+  const data = [
+    {
+      id: 1,
+      type: 'video',
+      src: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      alt: 'Video File',
+    },
+    {
+      id: 2,
+      type: 'image',
+      src: 'https://picsum.photos/1440/1440?random',
+      alt: 'Image File',
+    },
+    {
+      id: 3,
+      type: 'audio',
+      src: 'https://actions.google.com/sounds/v1/crowds/battle_crowd_celebration.ogg',
+      alt: 'Image File',
+    },
+    // ... more data
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handleNext = () => {
+    const nextSlide = (currentSlide + 1) % data.length;
+    setCurrentSlide(nextSlide);
+  };
+
+  const handlePrev = () => {
+    const prevSlide = currentSlide === 0 ? data.length - 1 : currentSlide - 1;
+    setCurrentSlide(prevSlide);
+  };
+
+  const currentMedia = data[currentSlide];
+
   return (
     <div className="sm:max-w-lg mx-auto bg-white rounded-xl shadow-md overflow-hidden lg:max-w-3xl m-10">
       <div className="">
-        <div className="basis-1/2">
-          <img className="w-full object-cover lg:max-h-[450px]" src="https://picsum.photos/1440/1440?random" alt="Postingan" />
+        <div className="basis-1/2 relative z-0">
+          {currentMedia.type === 'video' ? (
+            <video controls src={currentMedia.src} alt={currentMedia.alt}>
+              Your browser does not support the video element.
+            </video>
+          ) : currentMedia.type === 'audio' ? (
+            <div className='flex justify-center items-center my-10'>
+              <img className="lg:w-20 lg:h-20 rounded-[5px] mr-5" style={{ width: '120px', height: '120px' }} src="https://picsum.photos/500/500?random" alt="Profile" />
+              <audio controls className='ml-5' src={currentMedia.src} alt={currentMedia.alt}>
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          ) : (
+            <img className="w-full object-cover lg:max-h-[450px]" src={currentMedia.src} alt={currentMedia.alt} />
+          )}
+
+          <div className="absolute top-0 left-0 flex items-center justify-center h-full w-12 opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <button className="slider-arrow slider-arrow--left" onClick={handlePrev}>
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.8535 4.37615L8.13725 14.3436C7.9666 14.5187 7.87109 14.7535 7.87109 14.998C7.87109 15.2425 7.9666 15.4773 8.13725 15.6524L17.8535 25.6236C17.933 25.7053 18.028 25.7702 18.133 25.8145C18.238 25.8588 18.3508 25.8816 18.4648 25.8816C18.5787 25.8816 18.6915 25.8588 18.7965 25.8145C18.9015 25.7702 18.9965 25.7053 19.076 25.6236C19.2396 25.4562 19.3311 25.2315 19.3311 24.9974C19.3311 24.7633 19.2396 24.5386 19.076 24.3711L9.93913 14.998L19.076 5.62677C19.239 5.45943 19.3302 5.23506 19.3302 5.00146C19.3302 4.76786 19.239 4.54349 19.076 4.37615C18.9965 4.2945 18.9015 4.22961 18.7965 4.1853C18.6915 4.14099 18.5787 4.11816 18.4648 4.11816C18.3508 4.11816 18.238 4.14099 18.133 4.1853C18.028 4.22961 17.933 4.2945 17.8535 4.37615Z" fill="black"/>
+              </svg>
+            </button>
+          </div>
+
+          <div className="absolute top-0 right-0 flex items-center justify-center h-full w-12 opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <button className="slider-arrow slider-arrow--right" onClick={handleNext}>
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.98657 4.37427C9.82301 4.5417 9.73145 4.76646 9.73145 5.00052C9.73145 5.23458 9.82301 5.45934 9.98657 5.62677L19.1234 14.9999L9.98657 24.3711C9.82301 24.5386 9.73145 24.7633 9.73145 24.9974C9.73145 25.2315 9.82301 25.4562 9.98657 25.6236C10.0661 25.7053 10.1611 25.7702 10.2661 25.8145C10.3711 25.8588 10.4839 25.8816 10.5978 25.8816C10.7118 25.8816 10.8246 25.8588 10.9295 25.8145C11.0345 25.7702 11.1296 25.7053 11.2091 25.6236L20.9253 15.6543C21.096 15.4792 21.1915 15.2444 21.1915 14.9999C21.1915 14.7554 21.096 14.5206 20.9253 14.3455L11.2091 4.37615C11.1296 4.2945 11.0345 4.22961 10.9295 4.1853C10.8246 4.14099 10.7118 4.11816 10.5978 4.11816C10.4839 4.11816 10.3711 4.14099 10.2661 4.1853C10.1611 4.22961 10.0661 4.2945 9.98657 4.37615V4.37427Z" fill="black"/>
+              </svg>
+            </button>
+          </div>
+
+          {/* <video controls src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" alt="Video File">
+            Your browser does not support the video element.
+          </video>
+          <audio controls className='mx-auto my-10' src="https://actions.google.com/sounds/v1/crowds/battle_crowd_celebration.ogg" alt="Audio File">
+            Your browser does not support the audio element.
+          </audio>
+          <img className="w-full object-cover lg:max-h-[450px]" src="https://picsum.photos/1440/1440?random" alt="Postingan" /> */}
+          {/* {isLoading && (
+            <div className="flex justify-center items-center mt-4">
+              <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+                <span className="sr-only">Loading...</span>
+              </div>
+            </div>
+          )}
+          {file && !isLoading && (
+            <>
+              {file.type === "image" && (
+                <img
+                  className="w-full object-cover lg:max-h-[450px]"
+                  src={file.url}
+                  alt="Postingan"
+                />
+              )}
+              {file.type === "video" && (
+                <video controls src={file.url} />
+              )}
+              {file.type === "audio" && (
+                <audio controls src={file.url} />
+              )}
+            </>
+          )} */}
         </div>
         <div className="basis-1/2 p-8">
           <div className="text-3xl text-black font-bold">Judul Postingan</div>

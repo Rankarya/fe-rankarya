@@ -9,14 +9,6 @@ function App() {
       <Route path={"/post"} element={<ListPost />} />
       </Routes>
     </Router>
-    // <div>
-    //   <ul className='flex gap-4'>
-    //     <li>tes1</li>
-    //     <li>tes2</li>
-    //   </ul>
-    // </div>
-  
-    
   )
 }
 
