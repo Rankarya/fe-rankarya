@@ -1,12 +1,13 @@
-import { useState } from "react";
-import Settings from "./pages/settings/settings";
+import React from 'react';
+import Settings from './pages/settings/settings.jsx';
+import { useTheme } from './context/ThemeContext.jsx';
 
-function App() {
+export default function App() {
+  const { theme } = useTheme();
+
   return (
-    <div>
+    <div className={theme === 'dark' ? 'bg-black text-white' : ''}>
       <Settings />
     </div>
   );
 }
-
-export default App;
