@@ -26,7 +26,7 @@ export default function Updateprofile() {
           </div>
           <input className="border-b border-b-gray-300 w-[600px] focus:outline-none"></input>
         </div>
-        <div className="rounded-sm duration-300 w-[180px] hover:cursor-pointer hover:shadow-lg">
+        <div className="rounded-md duration-300 p-2 w-[180px] hover:cursor-pointer hover:shadow-lg">
          <img src="../src/assets/metamask-seeklogo.svg"></img>
           <label className="text-xs text-orange-400 font-bold h-full mb-24 cursor-pointer">
             Connect with MetaMask
