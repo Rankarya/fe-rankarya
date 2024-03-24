@@ -70,9 +70,9 @@ export default function Sidebar() {
           </li>
         </ul>
         <ul className="flex flex-col gap-2 ">
-          <li class="group flex items-center gap-2 py-2 px-6 cursor-pointer hover:bg-gray-700 hover:text-white">
+          <li className="group flex items-center gap-2 py-2 px-6 cursor-pointer hover:bg-gray-700 hover:text-white">
             <svg
-              class="fill-black group-hover:fill-white"
+              className="fill-black group-hover:fill-white"
               width="20"
               height="20"
               viewBox="0 0 20 23"

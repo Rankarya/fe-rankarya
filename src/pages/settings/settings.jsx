@@ -12,8 +12,8 @@ export default function Settings() {
         <div className="font-bold mb-4 text-xl">Settings</div>
         <Profile />
         <Updateprofile/>
-        {/* <Account/> */}
-        {/* <Theme/> */}
+        <Account/>
+        <Theme/>
       </div>
     </div>
   );

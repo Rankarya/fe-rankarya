@@ -26,7 +26,7 @@ const SearchPostingan = () => {
             </div>
             <div className='flex'>
             <select 
-                class="border border-black px-4 py-2 my-2 mr-2 rounded w-1/3 focus:outline-none focus:border-gray-600"
+                className="border border-black px-4 py-2 my-2 mr-2 rounded w-1/3 focus:outline-none focus:border-gray-600"
                 name="media"
             >
                 <option value="">Media Type</option>
@@ -35,14 +35,14 @@ const SearchPostingan = () => {
                 <option value="audio">Audio</option>
             </select>
             <select 
-                class="border border-black px-4 py-2 m-2 rounded w-1/3 focus:outline-none focus:border-gray-600"
+                className="border border-black px-4 py-2 m-2 rounded w-1/3 focus:outline-none focus:border-gray-600"
                 name="tier"
             >
                 <option value="">Tier</option>
                 <option value="1">Tier</option>
             </select>
             <select 
-                class="border border-black px-4 py-2 my-2 ml-2 rounded w-1/3 focus:outline-none focus:border-gray-600"
+                className="border border-black px-4 py-2 my-2 ml-2 rounded w-1/3 focus:outline-none focus:border-gray-600"
                 name="date"
             >
                 <option value="">Month</option>

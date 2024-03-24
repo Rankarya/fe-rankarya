@@ -1,5 +1,5 @@
 import React from "react";
-import { Label, TextInput, Card } from "flowbite-react"; // Mengimpor komponen Card
+import {  TextInput, Card } from "flowbite-react"; // Mengimpor komponen Card
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi";
@@ -7,7 +7,7 @@ import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi";
 function LandingPage() {
   const [activeCardIndex, setActiveCardIndex] = React.useState(0); // State to track the currently visible set of cards (0 or 1)
 
-  const handleCardClick = (category) => {
+  const handleCardClick = () => {
     // Handle card click logic (optional, not provided)
   };
 

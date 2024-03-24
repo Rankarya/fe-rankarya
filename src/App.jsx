@@ -1,5 +1,4 @@
 //<<<<<<< HEAD
-// import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Login from "./pages/loginuser";
 import Register from "./pages/registeruser";
@@ -11,6 +10,9 @@ import Footer from "./components/Footer";
 import Settings from "./pages/settings/settings";
 import Creator from "./pages/creator";
 function App() {
+
+
+
   return (
     <Router>
       <div className="h-screen">
