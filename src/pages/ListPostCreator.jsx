@@ -1,15 +1,15 @@
 import CreatePost from "../components/CreatePost.jsx";
-import Post from "../components/Post.jsx";
+import PostCreator from "../components/PostCreator.jsx";
 import SearchPost from "../components/SearchPost.jsx";
 
-const ListPost = () => {
+const ListPostCreator = () => {
   return (
     <>
         <CreatePost/>
         <SearchPost/>
-        <Post/>
+        <PostCreator/>
     </>
   )
 }
 
-export default ListPost;
+export default ListPostCreator;

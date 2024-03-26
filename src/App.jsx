@@ -1,12 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ListPost from "./pages/ListPost.jsx";
+import ListPostCreator from "./pages/ListPostCreator.jsx";
+import ListPostUser from "./pages/ListPostUser.jsx";
 
 
 function App() {
   return (
     <Router>
       <Routes>
-      <Route path={"/post"} element={<ListPost />} />
+        <Route path={"/postCreator"} element={<ListPostCreator />} />
+        <Route path={"/postUser"} element={<ListPostUser />} />
       </Routes>
     </Router>
   )

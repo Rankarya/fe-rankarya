@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { Link, useParams, useNavigate } from "react-router-dom";
 
-const Post = () => {
+const PostCreator = () => {
   const [liked, setLiked] = useState(false);
 
   const toggleLike = () => {
@@ -260,4 +260,4 @@ const Post = () => {
   );
 }
 
-export default Post;
+export default PostCreator;
