@@ -160,7 +160,7 @@ const PostUser = () => {
                 </Link>
 
                 {isReportModalOpen && (
-                    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
+                    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-30">
                         <div className="bg-white p-4 rounded-xl">
                             <p>Are you sure you want to report this post?</p>
                             <div className="flex justify-end mt-4">
