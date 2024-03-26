@@ -5,8 +5,8 @@ export default function Theme() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div>
-      <ul>
+    <div >
+      <ul className="mt-10">
         <li className="flex gap-2 my-2">
           <input
             type="radio"

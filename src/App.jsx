@@ -6,8 +6,10 @@ export default function App() {
   const { theme } = useTheme();
 
   return (
-    <div className={theme === 'dark' ? 'bg-black text-white' : ''}>
-      <Settings />
+    <div className={theme === 'dark' ? 'bg-neutral-900 text-white' : 'bg-stone-100 text-black'}>
+      <div className="min-h-screen">
+        <Settings />
+      </div>
     </div>
   );
 }

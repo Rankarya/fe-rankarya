@@ -18,9 +18,8 @@ export default function Settings() {
   return (
     <div className="flex">
       <Sidebar handlePageChange={handlePageChange} activePage={activePage} />
-      <div className="border-l-2 pl-8 pt-2 w-full">
-        <div className="font-bold mb-4 text-xl">Settings</div>
-        <Profile/>
+      <div className="ml-64 pl-8 pt-2 w-[633px]">
+        <div className="font-bold mb-4 mt-6 text-2xl">Settings</div>
         {activePage === "Profile" && <Updateprofile />}
         {activePage === "Account" && <Account />}
         {activePage === "Theme" && <Theme />}

@@ -1,8 +1,8 @@
 export default function Subbed() {
   return (
-    <div>
-      <div className="group flex gap-3 items-center rounded-md hover:cursor-pointer hover:shadow-md hover:duration-300">
-        <div>
+    <div className="mt-10">
+      <div className="group flex bg-stone-200 gap-3 items-center rounded-lg hover:cursor-pointer hover:duration-300">
+        <div className="p-2">
           <img
             src="https://i.imgur.com/eOx9uGG.jpeg"
             className="w-[40px] h-[40px] rounded-full"

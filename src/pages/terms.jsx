@@ -2,16 +2,23 @@ import React from "react";
 
 function TermsSection({ title, description, listItems }) {
   return (
-    <div>
+    <div className="mt-9">
       <h2 className="text-lg font-bold">{title}</h2>
-      <p>{description}</p>
-      <ul>{listItems}</ul>
+      <p>{description}</p><br/>
+      {listItems && (
+        <ul className="list-decimal pl-4">
+          {listItems.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      )}
       <br />
       <hr className="border-black" />
       <br />
     </div>
   );
 }
+
 
 export default function Terms() {
   const sections = [

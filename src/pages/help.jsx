@@ -1,6 +1,6 @@
 export default function Help() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 mt-9">
       <label className="text-xl font-bold">How can we help you?</label>
       <input className="w-[400px] focus:outline-none border border-black rounded-md"></input>
       <div>
