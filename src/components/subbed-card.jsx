@@ -1,7 +1,10 @@
+import { useTheme } from "../context/ThemeContext";
+
 export default function Subbed() {
+  const {theme} = useTheme()
   return (
     <div className="mt-10">
-      <div className="group flex bg-stone-200 gap-3 items-center rounded-lg hover:cursor-pointer hover:duration-300">
+      <div className={`${theme === 'dark' ? 'group flex bg-neutral-800 gap-3 items-center rounded-lg hover:bg-neutral-700 hover:cursor-pointer hover:duration-300':'group flex bg-stone-100 gap-3 items-center rounded-lg hover:bg-stone-200 hover:cursor-pointer hover:duration-300'}`}>
         <div className="p-2">
           <img
             src="https://i.imgur.com/eOx9uGG.jpeg"

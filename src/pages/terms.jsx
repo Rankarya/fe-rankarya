@@ -1,10 +1,12 @@
 import React from "react";
+import { useTheme } from "../context/ThemeContext";
 
 function TermsSection({ title, description, listItems }) {
+  const {theme} = useTheme()
   return (
-    <div className="mt-9">
+    <div className="mt-4">
       <h2 className="text-lg font-bold">{title}</h2>
-      <p>{description}</p><br/>
+      <p>{description}</p>
       {listItems && (
         <ul className="list-decimal pl-4">
           {listItems.map((item, index) => (
@@ -13,8 +15,8 @@ function TermsSection({ title, description, listItems }) {
         </ul>
       )}
       <br />
-      <hr className="border-black" />
-      <br />
+      <hr className={`${theme === 'dark' ? "border-white" : "border-black"}`} />
+      
     </div>
   );
 }
@@ -75,7 +77,7 @@ export default function Terms() {
   ];
 
   return (
-    <div className="w-[600px]">
+    <div className="w-[600px] mt-9">
       {sections.map((section, index) => (
         <TermsSection
           key={index}
@@ -84,13 +86,12 @@ export default function Terms() {
           listItems={section.listItems}
         />
       ))}
-      <p>
+      <p className="mt-4">
         Dengan menggunakan Rankarya, Anda menyatakan bahwa Anda telah membaca,
         memahami, dan menyetujui syarat-syarat penggunaan ini. Jika Anda
         memiliki pertanyaan atau kekhawatiran, jangan ragu untuk menghubungi
         kami.
       </p>
-      <p>Terima kasih telah bergabung dengan Rankarya!</p>
       <br />
     </div>
   );

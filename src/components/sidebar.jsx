@@ -10,11 +10,11 @@ export default function Sidebar({ handlePageChange, activePage }) {
 
   const activeClass =
     theme === "dark"
-      ? "bg-neutral-700 fill-neutral-100 "
+      ? "bg-neutral-700 fill-stone-100 "
       : "bg-stone-100 fill-black";
   const inactiveClass =
     theme === "dark"
-      ? "text-white fill-neutral-100 hover:bg-neutral-700 "
+      ? "text-white fill-stone-100 hover:bg-neutral-700 "
       : "text-gray-700 fill-black hover:bg-stone-100";
   return (
     <>

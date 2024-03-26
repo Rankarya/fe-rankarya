@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Account from "./account";
-import Profile from "./profile";
 import Theme from "./theme";
 import Sidebar from "../components/sidebar";
 import Updateprofile from "./updateprofile";
 import Subscription from "./subscription";
 import Help from "./help";
 import Terms from "./terms";
+import Privacy from "./privacy";
 
 export default function Settings() {
   const [activePage, setActivePage] = useState("Profile");
@@ -26,6 +26,7 @@ export default function Settings() {
         {activePage === "Subscription" && <Subscription/>}
         {activePage === "Help Center" && <Help/>}
         {activePage === "Terms of Use" && <Terms/>}
+        {activePage === "Privacy Policy" && <Privacy/>}
       </div>
     </div>
   );
