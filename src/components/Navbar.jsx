@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 
 const navigation = [
   { name: "Home", href: "/", current: false },
-  { name: "Categories", href: "/categories", current: false },
-  { name: "Creators", href: "/post", current: false },
+  { name: "Creators", href: "/Creatorspage", current: false },
+  { name: "Comunity", href: "/Comunity", current: false },
 ];
 
 function classNames(...classes) {
@@ -129,6 +129,19 @@ export default function Nav() {
                             )}
                           >
                             Settings
+                          </Link>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            to="/Upgradetocreators"
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
+                          >
+                            Upgrade to creators
                           </Link>
                         )}
                       </Menu.Item>

@@ -9,7 +9,7 @@ function LandingPage() {
   const [activeContentsIndex, setActiveContentsIndex] = useState(0);
   const [activeHeaderIndex, setActiveHeaderIndex] = useState(0);
 
-  const headerData = [
+  const headerData = [  
     {
       title: "TEMUKAN CONTENT MENARIK DI RANKARYA",
       imageUrl: "https://i.imgur.com/K1H4rN0.png",
