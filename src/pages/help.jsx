@@ -2,7 +2,7 @@ export default function Help() {
   return (
     <div className="flex flex-col gap-4">
       <label className="text-xl font-bold">How can we help you?</label>
-      <input className="focus:outline-none border border-black rounded-md"></input>
+      <input className="w-[400px] focus:outline-none border border-black rounded-md"></input>
       <div>
         <ul className="flex gap-4">
           {["Getting Started", "Guides", "Wallet"].map((item, index) => (

@@ -1,4 +1,4 @@
-import Subbed from "../../components/subbed-card";
+import Subbed from "../components/subbed-card";
 
 export default function Subscription(){
     return(
