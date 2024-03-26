@@ -1,4 +1,7 @@
+import { useTheme } from "../context/ThemeContext";
+
 export default function Updateprofile() {
+  const theme = useTheme()
   return (
     <>
       <div className="flex flex-col gap-4">

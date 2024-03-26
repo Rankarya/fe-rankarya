@@ -8,22 +8,28 @@ export default function Sidebar({ handlePageChange, activePage }) {
       ? "https://i.imgur.com/9XUH7ES.png"
       : "https://i.imgur.com/lRuTacK.jpeg";
 
-  const activeClass = theme === "dark" ? "bg-neutral-700 fill-neutral-100 " : "bg-stone-100 fill-black";
-  const inactiveClass = theme === "dark" ? "text-white fill-neutral-100 hover:bg-neutral-700 " : "text-gray-700 fill-black hover:bg-stone-100";
+  const activeClass =
+    theme === "dark"
+      ? "bg-neutral-700 fill-neutral-100 "
+      : "bg-stone-100 fill-black";
+  const inactiveClass =
+    theme === "dark"
+      ? "text-white fill-neutral-100 hover:bg-neutral-700 "
+      : "text-gray-700 fill-black hover:bg-stone-100";
   return (
     <>
       <div
         className={
           theme === "dark"
             ? "fixed flex flex-col justify-between w-2/12 p-4 h-screen bg-neutral-800"
-            : "fixed flex flex-col border-r-2 justify-between w-2/12 p-4 h-screen bg-white"
+            : "fixed flex flex-col justify-between w-2/12 p-4 h-screen bg-white"
         }
       >
         <div>
           <Profile />
           <ul className="flex flex-col gap-2">
             <li
-              className={`group rounded-lg flex items-center gap-4 py-2 px-3 cursor-pointer ${
+              className={`group rounded-lg flex items-center gap-4 py-2 px-3 duration-300 cursor-pointer ${
                 activePage === "Profile"
                   ? `${activeClass} ${inactiveClass}`
                   : `${inactiveClass}`
@@ -46,18 +52,16 @@ export default function Sidebar({ handlePageChange, activePage }) {
             </li>
 
             <li
-              className={`group flex items-center gap-4 py-1 px-2 cursor-pointer ${
+              className={`group rounded-lg flex items-center gap-4 py-2 px-3 duration-300 cursor-pointer ${
                 activePage === "Account"
-                  ? "fill-white bg-black opacity-75 text-white hover:opacity-100 hover:duration-300"
-                  : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-100 hover:duration-300"
+                  ? `${activeClass} ${inactiveClass}`
+                  : `${inactiveClass}`
               }`}
               onClick={() => handlePageChange("Account")}
             >
               <svg
                 className={`${
-                  activePage === "Account"
-                    ? "fill-white group-hover:fill-white"
-                    : "fill-black group-hover:fill-white"
+                  activePage === "Account" ? activeClass : inactiveClass
                 }`}
                 width="20"
                 height="20"
@@ -70,18 +74,16 @@ export default function Sidebar({ handlePageChange, activePage }) {
               Account
             </li>
             <li
-              className={`group flex items-center gap-4 py-1 px-2 cursor-pointer ${
+             className={`group rounded-lg flex items-center gap-4 py-2 px-3 duration-300 cursor-pointer ${
                 activePage === "Theme"
-                  ? "fill-white bg-black opacity-75 text-white hover:opacity-100 hover:duration-300"
-                  : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-100 hover:duration-300"
+                  ? `${activeClass} ${inactiveClass}`
+                  : `${inactiveClass}`
               }`}
               onClick={() => handlePageChange("Theme")}
             >
               <svg
                 className={`${
-                  activePage === "Theme"
-                    ? "fill-white group-hover:fill-white"
-                    : "fill-black group-hover:fill-white"
+                  activePage === "Theme" ? activeClass : inactiveClass
                 }`}
                 width="20"
                 height="20"
@@ -94,18 +96,16 @@ export default function Sidebar({ handlePageChange, activePage }) {
               Theme
             </li>
             <li
-              className={`group flex items-center gap-4 py-1 px-2 cursor-pointer ${
+              className={`group rounded-lg flex duration-300 items-center gap-4 py-2 px-3 cursor-pointer ${
                 activePage === "Subscription"
-                  ? "fill-white bg-black opacity-75 text-white hover:opacity-100 hover:duration-300"
-                  : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-100 hover:duration-300"
+                  ? `${activeClass} ${inactiveClass}`
+                  : `${inactiveClass}`
               }`}
               onClick={() => handlePageChange("Subscription")}
             >
               <svg
                 className={`${
-                  activePage === "Subscription"
-                    ? "fill-white group-hover:fill-white"
-                    : "fill-black group-hover:fill-white"
+                  activePage === "Subscription" ? activeClass : inactiveClass
                 }`}
                 width="20"
                 height="20"
@@ -119,18 +119,16 @@ export default function Sidebar({ handlePageChange, activePage }) {
             </li>
 
             <li
-              className={`group flex items-center gap-4 py-1 px-2 cursor-pointer ${
+             className={`group rounded-lg flex items-center duration-300 gap-4 py-2 px-3 cursor-pointer ${
                 activePage === "Help Center"
-                  ? "fill-white bg-black opacity-75 text-white hover:opacity-100 hover:duration-300"
-                  : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-100 hover:duration-300"
+                  ? `${activeClass} ${inactiveClass}`
+                  : `${inactiveClass}`
               }`}
               onClick={() => handlePageChange("Help Center")}
             >
               <svg
                 className={`${
-                  activePage === "Help Center"
-                    ? "fill-white group-hover:fill-white"
-                    : "fill-black group-hover:fill-white"
+                  activePage === "Help Center" ? activeClass : inactiveClass
                 }`}
                 width="20"
                 height="20"
@@ -143,18 +141,16 @@ export default function Sidebar({ handlePageChange, activePage }) {
             </li>
 
             <li
-              className={`group flex items-center gap-4 py-1 px-2 cursor-pointer ${
+              className={`group rounded-lg flex items-center gap-4 duration-300 py-2 px-3 cursor-pointer ${
                 activePage === "Terms of Use"
-                  ? "fill-white bg-black opacity-75 text-white hover:opacity-100 hover:duration-300"
-                  : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-100 hover:duration-300"
+                  ? `${activeClass} ${inactiveClass}`
+                  : `${inactiveClass}`
               }`}
               onClick={() => handlePageChange("Terms of Use")}
             >
               <svg
                 className={`${
-                  activePage === "Terms of Use"
-                    ? "fill-white group-hover:fill-white"
-                    : "fill-black group-hover:fill-white"
+                  activePage === "Terms of Use" ? activeClass : inactiveClass
                 }`}
                 width="20"
                 height="20"
@@ -167,18 +163,16 @@ export default function Sidebar({ handlePageChange, activePage }) {
               Terms of Use
             </li>
             <li
-              className={`group flex items-center gap-4 py-1 px-2 cursor-pointer ${
+              className={`group rounded-lg flex items-center gap-4 py-2 px-3 duration-300 cursor-pointer ${
                 activePage === "Privacy Policy"
-                  ? "fill-white bg-black opacity-75 text-white hover:opacity-100 hover:duration-300"
-                  : "fill-black hover:fill-white hover:bg-black hover:text-white hover:opacity-100 hover:duration-300"
+                  ? `${activeClass} ${inactiveClass}`
+                  : `${inactiveClass}`
               }`}
               onClick={() => handlePageChange("Privacy Policy")}
             >
               <svg
                 className={`${
-                  activePage === "Privacy Policy"
-                    ? "fill-white group-hover:fill-white"
-                    : "fill-black group-hover:fill-white"
+                  activePage === "Privacy Policy" ? activeClass : inactiveClass
                 }`}
                 width="20"
                 height="20"
