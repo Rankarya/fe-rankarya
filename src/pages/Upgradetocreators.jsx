@@ -1,12 +1,12 @@
 import React from "react";
-import { Label, TextInput } from "flowbite-react";
+import { Label, TextInput, Button } from "flowbite-react";
 
 function Upgradetocreators() {
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="max-w-md">
-        <div className="mb-2 block text-black">
-          <Label htmlFor="email3" value="Upgrade to creator" color="black" />
+      <div className="max-w-xl text-center">
+        <div className="mb-6 text-black" style={{ fontSize: "1.875rem", fontWeight: "bold" }}>
+          <Label htmlFor="email3" value="UPGRADE TO CREATOR" color="black" />
         </div>
         <TextInput
           id="email3"
@@ -26,6 +26,17 @@ function Upgradetocreators() {
             </>
           }
         />
+        <div className="relative mt-4">
+          <Button
+            size="lg"
+            color="cyan-600"
+            bgColor="white"
+            className="w-full border border-cyan-600"
+            style={{ borderRadius: "0" }}
+          >
+            Upgrade
+          </Button>
+        </div>
       </div>
     </div>
   );
