@@ -23,7 +23,7 @@ function App() {
             <Route path='/register' element={<Register/>}/>
             <Route path='/forgotpassword' element={<ForgotPassword/>}/>
             <Route path='/emailsent' element={<Email/>}/>
-            <Route path="/" element={<LandingPage />} />
+            <Route exact path="/" element={<LandingPage />} />
             <Route path="/post" element={<Creator />} />
             <Route path="/settings" element={<Settings />} />
           </Routes>
